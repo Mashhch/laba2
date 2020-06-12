@@ -19,7 +19,7 @@ protected:
 public:
 
 
-    //Копировать элементы из переданного массива
+
     DynamicArray(const T* massiv, const int size)
     {
         if (size < 0)
@@ -33,7 +33,7 @@ public:
             this->massiv[i] = massiv[i];
     }
 
-    //Создать массив заданной длины
+
     DynamicArray(const int size)
     {
         if (size < 0)
@@ -44,7 +44,7 @@ public:
         this->size = size;
         this->massiv = new T[size];
     }
-    //Копирующий конструктор
+
     DynamicArray(const DynamicArray<T>& massiv)
     {
         if (size < 0)
@@ -61,14 +61,14 @@ public:
 
 
 
-    //Деструктор
+
     ~DynamicArray()
     {
         this->size = 0;
         delete[] this->massiv;
     }
 
-    //Methods of class
+
     T& operator [] (const int index) const
     {
 
